@@ -21,7 +21,7 @@ import com.distribuida.entities.Seccion;
 @Controller
 @RequestMapping("/categorias")
 public class CategoriaController {
-	
+	/**/
 
 	@Autowired
 	private CategoriaService categoriaService;

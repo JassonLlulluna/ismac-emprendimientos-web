@@ -12,7 +12,7 @@
 <h1> Secciones </h1>
 
 <form action="del" method="GET">
-<input type="hidden" id="idSeccion" name="idCliente" value="${seccion.idSeccion}">
+<input type="hidden" id="idSeccion" name="idSeccion" value="${seccion.idSeccion}">
 <strong>¿Desea eliminar el dato?</strong>
 <br></br>
 <button type="submit">Eliminar</button>

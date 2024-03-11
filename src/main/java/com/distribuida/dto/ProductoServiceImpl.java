@@ -33,8 +33,8 @@ public class ProductoServiceImpl implements ProductoService {
 	}
 
 	@Override
-	public void add(int idProducto, String numeroProducto, String descripcion, double precioProducto, int stock,
-			String imgProducto, int fk_idCategoria) {
+	public void add(int idProducto, String numeroProducto, String descripcion, Double precioProducto, Integer stock,
+			String imgProducto, Integer fk_idCategoria) {
 		// TODO Auto-generated method stub
 		
 		Categoria categoria = categoriaDAO.findOne(fk_idCategoria);
@@ -48,8 +48,8 @@ public class ProductoServiceImpl implements ProductoService {
 	}
 
 	@Override
-	public void up(int idProducto, String numeroProducto, String descripcion, double precioProducto, int stock,
-			String imgProducto, int fk_idCategoria) {
+	public void up(int idProducto, String numeroProducto, String descripcion, Double precioProducto, Integer stock,
+			String imgProducto, Integer fk_idCategoria) {
 		// TODO Auto-generated method stub
 Categoria categoria = categoriaDAO.findOne(fk_idCategoria);
 		

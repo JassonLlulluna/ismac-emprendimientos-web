@@ -7,6 +7,18 @@
 <title>Insert title here</title>
 </head>
 <body>
+<h1> Categorias </h1>
+
+<form action="del" method="GET">
+<input type="hidden" id="idCategoria" name="idCategoria" value="${categoria.idCategoria}">
+<strong>¿Desea eliminar el dato?</strong>
+<br></br>
+<button type="submit">Eliminar</button>
+<button type="button" onclick="window.location.href='/ismac-spring-libreria-web/categorias/findAll';return false;">Cancelar</button>
+	 
+
+</form>
+
 
 </body>
 </html>

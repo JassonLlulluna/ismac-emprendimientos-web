@@ -10,11 +10,11 @@ public List<Producto> findAll();
 	
 	public Producto findOne(int id);
 	
-	public void add(int idProducto, String numeroProducto, String descripcion, double precioProducto, int stock,
-			String imgProducto, int fk_idCategoria);
+	public void add(int idProducto, String numeroProducto, String descripcion, Double precioProducto, Integer stock,
+			String imgProducto, Integer fk_idCategoria);
 	
-	public void up(int idProducto, String numeroProducto, String descripcion, double precioProducto, int stock,
-			String imgProducto, int fk_idCategoria);
+	public void up(int idProducto, String numeroProducto, String descripcion, Double precioProducto, Integer stock,
+			String imgProducto, Integer fk_idCategoria);
 	
 	public void del(int id);
 	

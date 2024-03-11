@@ -14,7 +14,7 @@
 
 
 	<h1> Productos </h1>
-	<form action="add" method="POST" enctype="multipart/form-data">
+	<form action="add" method="POST">
 
 	
 	 idProducto
@@ -30,7 +30,7 @@
 	 <input type="number" step="any" id="precioProducto" name="precioProducto" value="${producto.precioProducto}">
 	 <br/><br/>
 	 stock
-	 <input type="text" id="stock" name="stock" value="${producto.stock}">
+	 <input type="number" id="stock" name="stock" value="${producto.stock}">
 	 <br/><br/>
 	 imgProducto
 	 <input type="text" id="imgProducto" name="imgProducto" value="${producto.imgProducto}">
@@ -40,7 +40,7 @@
 	 Categoria
 	 	 <select id="idCategoria" name="idCategoria">
 	 	<c:forEach var="item" items="${categorias}">
-	 	<option value="${item.idCategoria}">${item.categoria}</option>
+	 	<option value="${item.idCategoria}"  ${producto.categoria.idCategoria == item.idCategoria ? 'selected' : ''}>${item.categoria}</option>
 	 	</c:forEach>
 	 </select>
 	 

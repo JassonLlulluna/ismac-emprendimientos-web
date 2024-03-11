@@ -27,11 +27,11 @@ public class Producto {
 	@Column(name="descripcion")
 	private String descripcion;
 	@Column(name="precioProducto")
-	private double precioProducto;
+	private Double precioProducto=0.0;
 	@Column(name="stock")
-	private int stock;
+	private Integer stock=0;
 	@Column(name="ImgProducto")
-	private String ImgProducto;
+	private String imgProducto;
 	
 	@ManyToOne(cascade= {CascadeType.DETACH, CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH})
 	@JoinColumn(name="fk_idCategoria")		
@@ -47,14 +47,14 @@ public class Producto {
 		
 
 	
-	public Producto(int idProducto, String numeroProducto, String descripcion, double precioProducto, int stock,
+	public Producto(int idProducto, String numeroProducto, String descripcion, Double precioProducto, Integer stock,
 				String imgProducto) {
 			this.idProducto = idProducto;
 			this.numeroProducto = numeroProducto;
 			this.descripcion = descripcion;
 			this.precioProducto = precioProducto;
 			this.stock = stock;
-			this.ImgProducto = imgProducto;
+			this.imgProducto = imgProducto;
 			
 		}
 
@@ -97,34 +97,34 @@ public class Producto {
 		}
 
 
-		public double getPrecioProducto() {
+		public Double getPrecioProducto() {
 			return precioProducto;
 		}
 
 
-		public void setPrecioProducto(double precioProducto) {
+		public void setPrecioProducto(Double precioProducto) {
 			this.precioProducto = precioProducto;
 		}
 
 
-		public int getStock() {
+		public Integer getStock() {
 			return stock;
 		}
 
 
-		public void setStock(int stock) {
+		public void setStock(Integer stock) {
 			this.stock = stock;
 		}
 
 
 
 		public String getImgProducto() {
-			return ImgProducto;
+			return imgProducto;
 		}
 
 
 		public void setImgProducto(String imgProducto) {
-			ImgProducto = imgProducto;
+			this.imgProducto = imgProducto;
 		}
 
 
@@ -144,7 +144,7 @@ public class Producto {
 		public String toString() {
 			return "Producto [idProducto=" + idProducto + ", numeroProducto=" + numeroProducto + ", descripcion="
 					+ descripcion + ", precioProducto=" + precioProducto + ", stock=" + stock + ", ImgProducto="
-					+ ImgProducto + ", categoria=" + categoria + "]";
+					+ imgProducto + ", categoria=" + categoria + "]";
 		}
 		
 	

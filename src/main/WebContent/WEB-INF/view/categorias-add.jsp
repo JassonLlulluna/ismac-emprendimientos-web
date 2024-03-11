@@ -15,7 +15,7 @@
 
 
 	<h1> Categorias </h1>
-	<form action="add" method="POST" enctype="multipart/form-data">
+	<form action="add" method="POST">
 	
 	 idCategoria
 	 <input type="hidden" id="idCategoria" name="idCategoria" value="${categoria.idCategoria}">

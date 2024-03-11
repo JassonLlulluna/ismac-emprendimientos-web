@@ -52,11 +52,16 @@ public class ProductoController {
 		Producto producto = productoService.findOne(idProducto);
 	modelMap.addAttribute("producto",producto);
 	}
+		
+		List<Categoria> categorias =categoriaService.findAll();
+		modelMap.addAttribute("categorias",categorias);
+
 	
-	List<Categoria> categorias =categoriaService.findAll();
 	
-	modelMap.addAttribute("categorias",categorias);
-	
+//	List<Categoria> categorias =categoriaService.findAll();
+//	
+//	modelMap.addAttribute("categorias",categorias);
+//	
 	if(opcion == 1) return "productos-add";
 	else return "productos-del";
 
@@ -80,7 +85,7 @@ public class ProductoController {
 	
 	
 	if(idProducto == null) {
-		productoService.add(0, numeroProducto, descripcion, precioProducto, stock, imgProducto, idCategoria);
+		productoService.add(0, numeroProducto, descripcion,precioProducto, stock, imgProducto, idCategoria);
 	}
 	else {
 		productoService.add(idProducto, numeroProducto, descripcion, precioProducto, stock, imgProducto, idCategoria);

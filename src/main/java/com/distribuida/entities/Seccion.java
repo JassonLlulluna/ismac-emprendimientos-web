@@ -37,6 +37,7 @@ public class Seccion {
 	
 	
 	
+	
 	public Seccion(int idSeccion, String seccion, String descripcion) {
 		this.idSeccion = idSeccion;
 		this.Seccion = seccion;
